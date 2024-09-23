@@ -86,7 +86,7 @@ public:
         for(int i = 0; i < size; i++){
             temp[i] = elements[i];
         }
-        if(element != NULL) delete[] elements;
+        if(elements != NULL) delete[] elements;
         elements = temp;
     }
     void push_back(T& value){
@@ -112,7 +112,7 @@ public:
     }
     void insert(iterator it, T val){
         if(size == space){
-            reserse(size * 2);
+            reserve(size * 2);
         }
         for(iterator it1 = rbegin(); it1 != it - 1; it1--){
             *it1 = *(it1 - 1);
