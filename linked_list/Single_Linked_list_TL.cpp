@@ -116,7 +116,7 @@ public:
         Node<T> *node;
     public:
         iterator(Node<T> *n) : node(n){}
-        bool operator!=(const iterator &other) const {
+        bool operator!=(const iterator &other){
             return node != other.node;
         }
         // ++tiento
